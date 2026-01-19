@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PainelSucena</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: '#000000', // Preto
+              secondary: '#334155',
+              accent: '#EAB308', // Amarelo Ouro (Yellow-500)
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<style>
+    @media print {
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            background: white !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        /* Oculta tudo que não for de impressão */
+        .no-print, aside, header, form, button, .sidebar-container {
+            display: none !important;
+        }
+        /* Mostra apenas a área de impressão */
+        .print-only {
+            display: block !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            background: white;
+            z-index: 9999;
+        }
+    }
+    /* Na tela normal, oculta a área de impressão */
+    .print-only {
+        display: none;
+    }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root"></div>
+</body>
+</html>

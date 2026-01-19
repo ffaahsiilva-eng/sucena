@@ -1,0 +1,7 @@
+{
+  "name": "PainelSucena",
+  "description": "Sistema centralizado para gestão operacional, segurança e rastreabilidade de serviços.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
